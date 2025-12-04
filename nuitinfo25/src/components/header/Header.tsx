@@ -1,3 +1,6 @@
+import React from 'react'
+import '../../ressources/css/header.css'
+
 const Header = () => {
     return (
         <div>
