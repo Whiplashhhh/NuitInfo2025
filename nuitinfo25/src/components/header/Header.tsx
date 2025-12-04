@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../ressources/css/header.css'
+import './header.css'
 import Menu from "./Menu";
 
 const Header = () => {
