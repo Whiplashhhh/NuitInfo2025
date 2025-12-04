@@ -7,7 +7,9 @@ const Header = () => {
     return (
         <>
             <div>
-
+                <div id="logo">
+                    <Logo />
+                </div>
                 <div id="menu">
                     <Menu />
                 </div>
