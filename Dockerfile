@@ -17,6 +17,7 @@ EXPOSE 3000
 
 # Installer les dépendances
 RUN npm install
+RUN npm run build
 
 # Exposer le port
 EXPOSE 3000
@@ -26,5 +27,5 @@ ENV NODE_ENV=production
 
 # Lancer l'application en mode production
 #CMD [ "node", ".output/server/index.mjs" ]]
-#CMD [ "npm", "start" ]
-CMD ["node", "server.js"]
+CMD [ "npm", "start" ]
+#CMD ["node", "server.js"]
