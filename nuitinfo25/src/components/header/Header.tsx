@@ -5,12 +5,12 @@ import Menu from "./Menu";
 const Header = () => {
     return (
         <>
-            <div>
-                <h1>Revive</h1>
-            </div>
-            <div id="menu">
-                <Menu />
-            </div>
+
+            <div id="block">
+                <div id="menu">
+                    <Menu />
+                </div>
+            </div >
         </>
     )
 }
