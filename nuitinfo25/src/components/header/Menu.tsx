@@ -1,7 +1,12 @@
+import '../../ressources/css/menu.css'
+
 const Menu = () => {
   return (
     <div>
-        <button>Menu</button>
+        <button className="menu-btn">
+            MENU <span className="icon">=</span>
+        </button>
+
     </div>
   );
 }
