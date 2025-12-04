@@ -1,0 +1,27 @@
+.menu-btn {
+    background: white;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 10px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+
+    box-shadow: 0 2px 0 black;
+    transition: all 0.15s ease;
+}
+
+.menu-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 0 black;
+}
+
+.menu-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 0 black;
+}
+
+.menu-btn .icon {
+    font-size: 20px;
+    font-weight: bold;
+}
