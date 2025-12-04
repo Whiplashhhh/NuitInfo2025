@@ -8,7 +8,6 @@ const Header = () => {
         <>
             <div>
                 <div id="logo">
-                    aaaaaaaaa
                     <Logo />
                 </div>
                 <div id="menu">
