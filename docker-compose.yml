@@ -55,6 +55,7 @@ services:
 
     restart: always
     environment:
+      WATCHPACK_POLLING: true
       # see https://ghost.org/docs/config/#configuration-options
       container__name: ${NAME}
       database__client: mysql
