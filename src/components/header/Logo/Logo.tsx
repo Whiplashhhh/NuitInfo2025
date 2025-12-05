@@ -1,4 +1,4 @@
-import logo from '../../ressources/images/LogoRevive.png'
+import logo from '../../../ressources/images/LogoReviveSVG.svg'
 
 const Logo = () => {
     return (

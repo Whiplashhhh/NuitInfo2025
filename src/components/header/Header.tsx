@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.css'
-import Menu from "./Menu";
-import Logo from "./Logo";
+import Menu from "./Menu/Menu";
+import Logo from "./Logo/Logo";
 
 const Header = () => {
     return (
