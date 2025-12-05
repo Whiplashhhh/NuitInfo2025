@@ -15,8 +15,8 @@ interface MenuItem {
 
 const Menu: React.FC<MenuProps> = ({ isOpen, toggleMenu }) => {
     const menuItems: MenuItem[] = [
-        { label: 'Retro', href: '#retro', isRoute: false },
-        { label: '😈 Défi Formulaire', href: '/annoying-form', isRoute: true },
+        { label: 'Défi Retro', href: '/retro', isRoute: true },
+        { label: 'Défi Sopra', href: '/annoying-form', isRoute: true },
     ];
 
     return (

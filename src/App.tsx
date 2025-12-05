@@ -6,6 +6,7 @@ import Body from "./components/body/Body";
 import { Routes, Route } from 'react-router-dom';
 import Game from "./components/body/game/Game";
 import AnnoyingForm from "./components/body/annoyingform/AnnoyingForm";
+import RetroSnake from "./components/retro/RetroSnake";
 
 // // Pour l'exemple, voici un faux composant Jeu si tu n'en as pas encore
 // const GamePlaceholder = () => <h1 style={{color:'white'}}>Ici c'est le Jeu !</h1>;
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Body />} />
             <Route path="/game" element={<Game />} />
             <Route path="/annoying-form" element={<AnnoyingForm />} />
+            <Route path="/retro" element={<RetroSnake />} />
         </Routes>
       <Footer />
     </div>
