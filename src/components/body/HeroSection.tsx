@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
       {/* Le Gros Bouton JOUER */}
       <div className="cta-container">
         <button className="play-button" onClick={handlePlayClick}>
-          🎮 LANCER LA MISSION
+          LANCER LA MISSION
         </button>
         <p className="cta-subtext">Prêt à relever le défi ?</p>
       </div>
