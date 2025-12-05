@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './menu.css';
 
 interface MenuProps {
@@ -9,11 +10,13 @@ interface MenuProps {
 interface MenuItem {
     label: string;
     href: string;
+    isRoute?: boolean;
 }
 
 const Menu: React.FC<MenuProps> = ({ isOpen, toggleMenu }) => {
     const menuItems: MenuItem[] = [
-        { label: 'Retro', href: '#retro' },
+        { label: 'Retro', href: '#retro', isRoute: false },
+        { label: '😈 Défi Formulaire', href: '/annoying-form', isRoute: true },
     ];
 
     return (
@@ -34,9 +37,15 @@ const Menu: React.FC<MenuProps> = ({ isOpen, toggleMenu }) => {
                 <ul>
                     {menuItems.map((item, index) => (
                         <li key={index}>
-                            <a href={item.href} onClick={toggleMenu}>
-                                {item.label}
-                            </a>
+                            {item.isRoute ? (
+                                <Link to={item.href} onClick={toggleMenu}>
+                                    {item.label}
+                                </Link>
+                            ) : (
+                                <a href={item.href} onClick={toggleMenu}>
+                                    {item.label}
+                                </a>
+                            )}
                         </li>
                     ))}
                 </ul>
