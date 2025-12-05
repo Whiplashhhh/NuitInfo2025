@@ -13,11 +13,7 @@ interface MenuItem {
 
 const Menu: React.FC<MenuProps> = ({ isOpen, toggleMenu }) => {
     const menuItems: MenuItem[] = [
-        { label: 'Accueil', href: '#accueil' },
-        { label: 'La Démarche', href: '#demarche' },
-        { label: 'Agir', href: '#agir' },
-        { label: 'Ressources', href: '#ressources' },
-        { label: 'Communauté', href: '#communaute' }
+        { label: 'Retro', href: '#retro' },
     ];
 
     return (
