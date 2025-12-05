@@ -1,21 +1,19 @@
-import React from 'react'
-import './header.css'
-import Menu from "./Menu/Menu";
-import Logo from "./Logo/Logo";
+import React from 'react';
+import './header.css';
+import Menu from './Menu/Menu';
+import Logo from './Logo/Logo';
 
 const Header = () => {
     return (
-        <>
-            <div>
-                <div id="logo">
-                    <Logo />
-                </div>
-                <div id="menu">
-                    <Menu />
-                </div>
-            </div >
-        </>
-    )
+        <header className="header">
+            <div className="header-logo">
+                <Logo />
+            </div>
+            <nav className="header-menu">
+                <Menu />
+            </nav>
+        </header>
+    );
 }
 
-export default Header
+export default Header;
