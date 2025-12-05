@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import './RetroSnake.css';
+import './retroSnake.css';
 
 const RetroSnake = () => {
     const gridSize = 20;
