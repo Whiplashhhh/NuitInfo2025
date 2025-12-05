@@ -2,9 +2,11 @@ import React from 'react';
 import './header.css';
 import Menu from './Menu/Menu';
 import Logo from './Logo/Logo';
+import Slogan from "./Slogan/Slogan";
 
 const Header = () => {
     return (
+        <>
         <header className="header">
             <div className="header-logo">
                 <Logo />
@@ -13,6 +15,10 @@ const Header = () => {
                 <Menu />
             </nav>
         </header>
+        <div className="header-slogan">
+            <Slogan />
+        </div>
+        </>
     );
 }
 
