@@ -1,0 +1,205 @@
+.banner-section {
+    position: relative;
+    min-height: 70vh;
+    margin-top: 80px;
+    background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 3rem 1.5rem;
+}
+
+.banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.15;
+}
+
+.banner-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: float 15s infinite ease-in-out;
+}
+
+.banner-circle:nth-child(1) {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+    animation-delay: 0s;
+}
+
+.banner-circle:nth-child(2) {
+    width: 300px;
+    height: 300px;
+    bottom: -80px;
+    left: -80px;
+    animation-delay: 5s;
+}
+
+.banner-circle:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 10%;
+    animation-delay: 10s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, 20px);
+    }
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.banner-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.banner-emphasis {
+    display: block;
+    color: #fef3c7;
+}
+
+.banner-description {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner-pillars {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.pillar-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 1.25rem 1.75rem;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.pillar-icon {
+    font-size: 2.5rem;
+}
+
+.pillar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.pillar-info strong {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.pillar-info span {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .banner-section {
+        min-height: 60vh;
+        margin-top: 70px;
+        padding: 2rem 1rem;
+    }
+
+    .banner-tag {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .banner-pillars {
+        gap: 1rem;
+    }
+
+    .pillar-card {
+        padding: 1rem 1.25rem;
+        min-width: 160px;
+    }
+
+    .pillar-icon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-pillars {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pillar-card {
+        width: 100%;
+    }
+}
