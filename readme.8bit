@@ -1,0 +1,59 @@
+╔══════════════════════════════════════════════════════════════╗
+║                     RETRO SNAKE 8-BIT                        ║
+╠══════════════════════════════════════════════════════════════╣
+║                                                              ║
+║  INSTRUCTIONS POUR ACCÉDER AU JEU SNAKE RÉTRO                ║
+║  ─────────────────────────────────────────────               ║
+║                                                              ║
+║  1. Lancez l'application avec : npm start                    ║
+║                                                              ║
+║  2. Accédez au jeu via l'une de ces méthodes :               ║
+║                                                              ║
+║     • URL directe : http://localhost:3000/retro              ║
+║                                                              ║
+║     • Via le menu : Cliquez sur le menu hamburger (☰)       ║
+║       en haut à droite, puis sur "Retro"                     ║
+║                                                              ║
+╠══════════════════════════════════════════════════════════════╣
+║                                                              ║
+║  CONTRÔLES DU JEU                                            ║
+║  ────────────────                                            ║
+║                                                              ║
+║     ↑  ←  ↓  →   : Flèches directionnelles                   ║
+║                                                              ║
+║     ESPACE       : Démarrer / Pause                          ║
+║                                                              ║
+╠══════════════════════════════════════════════════════════════╣
+║                                                              ║
+║  FICHIERS DU DÉFI RETRO                                      ║
+║  ──────────────────────                                      ║
+║                                                              ║
+║  📁 src/components/retro/                                   ║
+║     ├── RetroSnake.tsx    (Composant principal)              ║
+║     └── retroSnake.css    (Styles 8-bit)                     ║
+║                                                              ║
+╠══════════════════════════════════════════════════════════════╣
+║                                                              ║
+║  URL DE PRODUCTION (si déployé)                              ║
+║  ──────────────────────────────                              ║
+║                                                              ║
+║  https://[votre-domaine]/retro                               ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+    ██████████████████████████████
+    █  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄  █
+    █  █ ■ ■ ■ ■ ■ ●          █  █
+    █  █                      █  █
+    █  █        🍎            █  █
+    █  █                      █  █
+    █  █                      █  █
+    █  ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀  █
+    ██████████████████████████████
+    
+    SCORE: 0000     HIGH: 9999
+
+═══════════════════════════════════════════════════════════════
+Projet : Nuit de l'Info 2025 - Équipe Ctrl+Alt+RedBull
+Défi : On veut du gros pixel ! ✨🎮👾🕹️
+═══════════════════════════════════════════════════════════════
