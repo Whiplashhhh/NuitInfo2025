@@ -1,0 +1,188 @@
+/* Game.css */
+
+/* Le conteneur global qui divise l'écran en 3 colonnes */
+.game-wrapper {
+    display: flex;
+    width: 100%;
+    height: 90vh; /* Un peu plus grand */
+    background-color: #2c3e50;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+/* --- COLONNE GAUCHE : Messages / Feedback --- */
+.left-panel {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Texte aligné vers le jeu */
+    background: rgba(0, 0, 0, 0.2);
+    border-right: 2px solid #34495e;
+}
+
+.feedback-popup {
+    background-color: white;
+    color: #2c3e50;
+    padding: 15px 20px;
+    border-radius: 15px 15px 0 15px; /* Bulle de BD */
+    margin-bottom: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    max-width: 80%;
+    text-align: right;
+}
+
+/* --- COLONNE CENTRALE : Le Jeu --- */
+.game-area {
+    flex: 2; /* Prend 2x plus de place que les côtés */
+    position: relative;
+    background: linear-gradient(to bottom, #2980b9, #6dd5fa);
+    border-left: 2px solid #34495e;
+    border-right: 2px solid #34495e;
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+/* --- COLONNE DROITE : Légende --- */
+.right-panel {
+    flex: 1;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.legend-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.legend-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e67e22;
+    padding-bottom: 5px;
+    color: #e67e22;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.legend-emoji {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    width: 30px;
+    text-align: center;
+}
+
+/* --- ÉLÉMENTS DU JEU --- */
+.village-zone {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #27ae60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    z-index: 10;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+}
+
+.hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 20;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.falling-item {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    transition: transform 0.1s;
+    z-index: 5;
+}
+
+.falling-item:active {
+    transform: scale(0.9);
+}
+
+/* Bouton Retour */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 200; /* Au dessus de tout */
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background: #c0392b;
+}
+
+/* Overlays (Game Over / Start) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    text-align: center;
+}
+
+.overlay h1 { margin-bottom: 10px; }
+.overlay button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.item-converted {
+    opacity: 0.6;
+    animation: spin 0.5s ease-out;
+}
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+    100% { transform: translate(-50%, -50%) rotate(360deg) scale(0); }
+}

@@ -1,13 +1,13 @@
 import React from 'react';
-// import { useNavigate } from 'react-router-dom'; // Assure-toi d'avoir installé react-router-dom
+import { useNavigate } from 'react-router-dom'; // Assure-toi d'avoir installé react-router-dom
 import './Body.css';
 
 const HeroSection: React.FC = () => {
-//   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-//   const handlePlayClick = () => {
-//     navigate('/game'); // Redirige vers la route de ton jeu
-//   };
+  const handlePlayClick = () => {
+    navigate('/game'); // Redirige vers la route de ton jeu
+  };
 
   return (
     <section className="hero-section">
@@ -21,8 +21,7 @@ const HeroSection: React.FC = () => {
 
       {/* Le Gros Bouton JOUER */}
       <div className="cta-container">
-        <button className="play-button">
-            {/* <button className="play-button" onClick={handlePlayClick}> */}
+        <button className="play-button" onClick={handlePlayClick}>
           🎮 LANCER LA MISSION
         </button>
         <p className="cta-subtext">Prêt à relever le défi ?</p>
