@@ -5,8 +5,8 @@ const Logo = () => {
     return (
         <div className="logo-container">
             <div className="logo-nird">
-                <span className="logo-text">NIRD</span>
-                <span className="logo-subtitle">Numérique Inclusif, Responsable & Durable</span>
+                <span className="logo-text">REVIVE</span>
+                <span className="logo-subtitle">Powered by NIRD</span>
             </div>
         </div>
     );
