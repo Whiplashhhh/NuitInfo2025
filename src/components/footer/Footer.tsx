@@ -5,25 +5,28 @@ import LogoReviveSVG from "../../ressources/images/LogoReviveSVG.svg";
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <div className="footer-top">
+      <div className="footer-container">
 
         {/* Colonne gauche */}
-        <nav className="footer-left">
+        <div className="footer-column">
+          <h4 className="footer-title">Navigation</h4>
           <a href="#home">Accueil</a>
           <a href="#about">À propos</a>
           <a href="#contact">Contact</a>
-        </nav>
+        </div>
 
-        {/* Colonne centre */}
+        {/* Colonne centrale */}
         <div className="footer-center">
           <img src={LogoReviveSVG} alt="Logo Revive" className="footer-logo" />
-          <div className="footer-bottom">
-            &copy; 2025 Tous droits réservés
-          </div>
+          <p className="footer-description">
+            Redonner vie, respecter, recycler.
+          </p>
+          <p className="footer-rights">© {new Date().getFullYear()} Tous droits réservés</p>
         </div>
 
         {/* Colonne droite */}
-        <div className="footer-right">
+        <div className="footer-column">
+          <h4 className="footer-title">Réseaux</h4>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
